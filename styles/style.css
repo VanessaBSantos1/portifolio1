@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Krona+One&display=swap');
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #ffff;
+    --cor-terciaria: #22d4fd;
+
+    --fonte-primaria:'Montserrat', sans-serif;
+}
+*{ 
+    margin: 0;
+    padding: 0;
+} /* aplica para a pagina toda(reseta as configurações de margin e padding*/
+
+body{
+    background-color: var(--cor-primaria); /*cor do fundo da pagina*/
+    height: 100vh; /*altura da tag body na tela(100%)*/
+    box-sizing: border-box; /*tag de borda(mantem as "caixas" dentro do coiteiner body)*/
+    color: var(--cor-secundaria); /*cor da fonte*/
+} /*todo conteudo visual da pagina*/
+
+h1{
+    color: var(--cor-secundaria); /*cor da fonte do titulo*/
+} /*titulo*/
+
+p{
+    color: var(--cor-secundaria); /*cor da fonte do paragrafo*/
+} /*paragrafo*/
+
+.destaque_titulo{
+    color: var(--cor-terciaria); /*cor do destaque do titulo*/
+} /*tag strong(denota importancia)*/
+
+.conteiner{
+    display: flex; /*ajuste das caixas dentro do main*/
+    /*flex-direction: row; /* alinha as caixas em linha*/
+    align-items: center; /*organiza no centro*/
+    justify-content: space-between; /*define um espaço entre caixas*/
+    margin: 10% 15%; /*margem do conteiner 10% - topo e fundo, 15% - direita e esquerda*/ 
+} /*main*/
+
+.conteiner_texto{
+    display: flex; /*ajuste das caixas dentro do main - h1, p, div*/
+    flex-direction: column; /*alinha as caixas em coluna*/
+    gap: 20px; /*espaço entre caixas-colunas*/
+    width: 50%; /*largura - 50% do main*/
+}/*section - coluna a esquerda*/
+
+.conteiner_conteudo_titulo{
+    font-size: 2.25rem; /*tamanho da fonte*/
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*estilo da fonte do texto*/
+}/*h1 - coluna a esquerda*/
+
+.conteiner_conteudo_texto{
+    font-size: 1rem; /*tamanho da fonte*/
+    font-family:  var(--fonte-primaria); /*estilo da fonte do texto*/
+
+}/*p - coluna a esquerda*/
+
+.conteiner_conteudo_links{
+    display: flex; /*ajuste das caixas dentro da div*/
+    /*flex-direction: row; /* alinha as caixas em linha*/
+    justify-content: space-between; /*define um espaço entre caixas*/
+}/*div - coluna a esquerda*/ 
+
+.conteiner_conteudo_links_link{
+    background-color: var(--cor-terciaria); /*cor de fundo*/
+    width: 50%; /*tamanho do botão*/
+    text-align: center; /*alinha o texto no centro*/
+    border-radius: 1.5rem; /*arredonda as bordas*/
+    font-size: 1rem; /*tamanho da fonte*/
+    font-weight: 600; /* peso da fonte*/
+    padding: 15px 0; /*preenchimento do botão (espaço entre o texto e borda do botão)*/
+    color: var(--cor-primaria); /*cor da fonte*/
+    font-family: var(--fonte-primaria); /*estilo da fonte do texto*/
+    text-decoration: none; /*tira o subinhado do link*/
+
+}/*a - botões da div*/
+
+.conteiner_conteudo_img{
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+    .conteiner{
+        flex-direction: column-reverse; /* alinha as caixas em linha*/
+        padding: 5%;
+    }/*main*/
+    .conteiner_texto{
+        width: auto;
+    }   
+}
